@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">FormValidation</string>
+    <string name="full_name">Full name</string>
+    <string name="age">Age</string>
+    <string name="email_address">Email Address</string>
+    <string name="_63_mobile_number">+63 Mobile Number</string>
+    <string name="submit">SUBMIT</string>
+    <string-array name="gender_array">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
 </resources>
