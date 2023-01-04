@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -13,57 +14,74 @@
         android:paddingVertical="8dp">
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/full_name">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_name"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:hint="@string/email_address">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_email"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:hint="@string/_63_mobile_number">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_number"
+                android:inputType="phone"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
 
-        <DatePicker
+        <com.gcpcx.formvalidation.ui.CustomDatePicker
+            android:id="@+id/calendar_picker"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_gravity="center" />
 
-        <com.google.android.material.textview.MaterialTextView
-            style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_age"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:background="@drawable/outline_text"
-            android:text="@string/age"
-            tools:ignore="TextContrastCheck" />
+            android:clickable="false"
+            android:hint="@string/age">
 
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_age"
+                android:focusable="false"
+                android:clickable="false"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </com.google.android.material.textfield.TextInputLayout>
         <Spinner
+            android:id="@+id/spinner_gender"
             android:layout_width="match_parent"
             android:layout_height="?actionBarSize"
             android:spinnerMode="dropdown"
@@ -71,6 +89,7 @@
             />
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_submit"
             android:layout_width="match_parent"
             android:layout_height="?actionBarSize"
             android:layout_marginTop="8dp"
@@ -80,4 +99,4 @@
 
     </LinearLayout>
 
-</ScrollView>
+</androidx.core.widget.NestedScrollView>
